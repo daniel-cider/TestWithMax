@@ -2,6 +2,7 @@ pipeline {
     environment {
         registry = "danielcider/staging"
         registryCredential = 'dockerhub'
+        dockerImage = ''
     }
     agent any
     stages {
@@ -13,7 +14,7 @@ pipeline {
          stage('Building image') {
             steps{
                 script {
-                    dockerImage3 = docker.build registry + ":$BUILD_NUMBER"
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
                 }
             }
         }
@@ -21,7 +22,7 @@ pipeline {
             steps{
                 script {
                     docker.withRegistry( '', registryCredential ) {
-                        dockerImage3.push()
+                        dockerImage.push()
                     }
                 }
             }
