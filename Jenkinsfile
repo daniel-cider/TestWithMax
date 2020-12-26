@@ -3,7 +3,6 @@ pipeline {
     environment {
         registry = "danielcider/staging"
         registryCredential = 'dockerhub'
-        dockerImage = ''
     }
     stages {
          stage('Lint files') {
