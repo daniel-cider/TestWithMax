@@ -5,7 +5,7 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath="vahiwe/apacheapp"
+dockerpath="danielcider/apacheapp"
 
 # Step 2:  
 # Authenticate & tag
