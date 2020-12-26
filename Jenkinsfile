@@ -2,7 +2,6 @@ pipeline {
     environment {
         registry = "danielcider/staging"
         registryCredential = 'dockerhub'
-        def dockerImage = ''
     }
     agent any
     stages {
