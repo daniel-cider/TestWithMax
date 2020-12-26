@@ -1,9 +1,10 @@
 pipeline {
-    agent any
     environment {
         registry = "danielcider/staging"
         registryCredential = 'dockerhub'
+        dockerImage = ''
     }
+    agent any
     stages {
          stage('Lint files') {
               steps {
